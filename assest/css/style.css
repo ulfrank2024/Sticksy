@@ -366,12 +366,10 @@ footer {
     .container {
         padding: 15px;
     }
-    footer {
-        
+    footer {       
     flex-direction: column;
+    padding: 5px;
     }
-    
-
     header .container {
         flex-direction: row; /* Rétablir l'alignement en ligne */
         justify-content: space-between; /* Espacer le titre et le bouton */
