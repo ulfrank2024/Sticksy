@@ -366,6 +366,11 @@ footer {
     .container {
         padding: 15px;
     }
+    footer {
+        
+    flex-direction: column;
+    }
+    
 
     header .container {
         flex-direction: row; /* Rétablir l'alignement en ligne */
