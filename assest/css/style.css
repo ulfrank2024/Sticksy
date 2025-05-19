@@ -401,6 +401,47 @@ select[multiple] {
     color: #007bff;
     margin-bottom: 10px;
 }
+
+ /* Style pour la fenêtre modale */
+ .modal {
+    display: none; /* Caché par défaut */
+    position: fixed; /* Restez en place */
+    z-index: 1; /* Au-dessus des autres éléments */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    overflow: auto; /* Activer le défilement si nécessaire */
+    background-color: rgba(0,0,0,0.4); /* Fond semi-transparent noir */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% du haut et centré */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Peut être plus ou moins large, selon la taille de l'écran */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.required-field::after {
+    content: " *";
+    color: red;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {

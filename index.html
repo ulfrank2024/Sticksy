@@ -19,7 +19,7 @@
             <nav class="nav-links">
                 <ul>
                     <li><a href="#hero">Accueil</a></li>
-                    <li><a href="#cartes-visite">Cartes de Visite</a></li>
+                    <li><a href="#cartes-visite">Cartes professionnelles<a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#tarifs">Tarifs</a></li>
                     <li><a href="#galerie">Galerie</a></li>
@@ -39,7 +39,8 @@
     </section>
     <section id="cartes-visite" class="section">
         <div class="container">
-            <h2>Cartes de Visite</h2>
+
+            <h2>Cartes professionnelles</h2>
             <div class="cards-visite-grid">
                 <div class="cards-visite-info">
                     <h3>Cartes de visite en carton (papier rigide 300 g/m²)</h3>
@@ -299,12 +300,13 @@
             <p>Veuillez remplir le formulaire ci-dessous pour nous faire part de vos besoins. Nous vous contacterons rapidement avec un devis personnalisé.</p>
             <form id="demandeDevis">
                 <div class="form-group">
-                    <label for="nom">Nom et Prénom :</label>
+                    <label for="nom" class="required-field">Nom et Prénom :</label>
                     <input type="text" id="nom" name="nom" required>
                 </div>
     
                 <div class="form-group">
-                    <label for="email">Adresse Email :</label>
+
+                    <label for="email" class="required-field">Adresse Email :</label>
                     <input type="email" id="email" name="email" required>
                 </div>
     
@@ -314,16 +316,17 @@
                 </div>
     
                 <div class="form-group">
-                    <label for="service">Service Souhaité :</label>
+
+                    <label for="service" class="required-field">Service Souhaité :</label>
                     <select id="service" name="service" required>
                         <option value="">-- Sélectionnez un service --</option>
                         <option value="creation_logo">Création de Logos et Visuels</option>
                         <option value="creation_impression_etiquettes">Création + Impression + Livraison d'Étiquettes</option>
                         <option value="impression_seule_etiquettes">Impression Seule d'Étiquettes (Votre Design)</option>
                         <option value="application_expedition">Application sur Boîtes et Expédition</option>
-                        <option value="cartes_visite_plastique">Cartes de Visite en Plastique</option>
-                        <option value="cartes_visite_carton">Cartes de Visite en Carton</option>
-                        <option value="design_seul_cartes">Design Seul de Cartes de Visite</option>
+                        <option value="cartes_visite_plastique">Cartes professionnelles en Plastique</option>
+                        <option value="cartes_visite_carton">Cartes professionnelles en Carton</option>
+                        <option value="design_seul_cartes">Design Seul de Cartes professionnelles</option>
                         <option value="autre">Autre (veuillez préciser dans les détails)</option>
                     </select>
                 </div>
@@ -331,8 +334,9 @@
                 <div id="detailsEtiquettes" class="service-details" style="display:none;">
                     <h3>Détails pour les Étiquettes</h3>
                     <div class="form-group">
-                        <label for="quantiteEtiquettes">Quantité d’étiquettes :</label>
-                        <input type="number" id="quantiteEtiquettes" name="quantiteEtiquettes" min="50">
+
+                        <label for="quantiteEtiquettes" class="required-field">Quantité d’étiquettes :</label>
+                        <input type="number" id="quantiteEtiquettes" name="quantiteEtiquettes" min="50" required>
                     </div>
                     <div class="form-group">
                         <label for="dimensionsEtiquettes">Dimensions souhaitées (en cm) :</label>
@@ -343,8 +347,10 @@
                         <input type="text" id="materiauEtiquettes" name="materiauEtiquettes">
                     </div>
                     <div class="form-group">
-                        <label for="designEtiquettes">Avez-vous déjà un design ?</label>
-                        <select id="designEtiquettes" name="designEtiquettes">
+
+                        <label for="designEtiquettes" class="required-field">Avez-vous déjà un design ?</label>
+                        <select id="designEtiquettes" name="designEtiquettes" required>
+                            <option value="">-- Sélectionnez une option --</option>
                             <option value="non">Non, j'ai besoin d'un design.</option>
                             <option value="oui">Oui, je fournis le design.</option>
                         </select>
@@ -354,8 +360,8 @@
                 <div id="detailsCartesPlastique" class="service-details" style="display:none;">
                     <h3>Détails pour les Cartes de Visite en Plastique</h3>
                     <div class="form-group">
-                        <label for="quantiteCartesPlastique">Quantité de cartes :</label>
-                        <input type="number" id="quantiteCartesPlastique" name="quantiteCartesPlastique" min="50">
+                        <label for="quantiteCartesPlastique" class="required-field">Quantité de cartes :</label>
+                        <input type="number" id="quantiteCartesPlastique" name="quantiteCartesPlastique" min="50" required>
                     </div>
                     <div class="form-group">
                         <label for="finitionCartesPlastique">Finition (brillante ou matte) :</label>
@@ -366,8 +372,9 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="designCartesPlastique">Avez-vous déjà un design ?</label>
-                        <select id="designCartesPlastique" name="designCartesPlastique">
+                        <label for="designCartesPlastique" class="required-field">Avez-vous déjà un design ?</label>
+                        <select id="designCartesPlastique" name="designCartesPlastique" required>
+                            <option value="">-- Sélectionnez une option --</option>
                             <option value="non">Non, j'ai besoin d'un design.</option>
                             <option value="oui">Oui, je fournis le design.</option>
                         </select>
@@ -384,8 +391,8 @@
                  <div id="detailsCartesCarton" class="service-details" style="display:none;">
                     <h3>Détails pour les Cartes de Visite en Carton</h3>
                     <div class="form-group">
-                        <label for="quantiteCartesCarton">Quantité de cartes :</label>
-                        <input type="number" id="quantiteCartesCarton" name="quantiteCartesCarton" min="100">
+                        <label for="quantiteCartesCarton" class="required-field">Quantité de cartes :</label>
+                        <input type="number" id="quantiteCartesCarton" name="quantiteCartesCarton" min="100" required>
                     </div>
                     <div class="form-group">
                         <label for="finitionCartesCarton">Finition (mate ou brillante) :</label>
@@ -396,8 +403,9 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="designCartesCarton">Avez-vous déjà un design ?</label>
-                        <select id="designCartesCarton" name="designCartesCarton">
+                        <label for="designCartesCarton" class="required-field">Avez-vous déjà un design ?</label>
+                        <select id="designCartesCarton" name="designCartesCarton" required>
+                            <option value="">-- Sélectionnez une option --</option>
                             <option value="non">Non, j'ai besoin d'un design.</option>
                             <option value="oui">Oui, je fournis le design.</option>
                         </select>
@@ -441,6 +449,14 @@
     
                 <button type="submit" class="button" id="envoyerDemandeBtn">Envoyer la Demande</button>
                 <div id="reponseServeur" style="margin-top: 15px;"></div>
+    
+                <div id="confirmationModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" id="closeModalBtn">&times;</span>
+                        <p>Votre demande a été envoyée avec succès !</p>
+                        <p>Sticksy vous contactera dans les plus brefs délais.</p>
+                    </div>
+                </div>
             </form>
     
             <div class="contact-info">
@@ -477,7 +493,6 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Sélection des éléments de navigation (inchangé)
             const navToggle = document.querySelector('.nav-toggle');
             const navLinks = document.querySelector('.nav-links');
     
@@ -498,8 +513,7 @@
                     });
                 });
             });
-    
-            // Sélection des éléments du formulaire de demande de devis (inchangé)
+
             const serviceSelect = document.getElementById('service');
             const detailsEtiquettes = document.getElementById('detailsEtiquettes');
             const detailsCartesPlastique = document.getElementById('detailsCartesPlastique');
@@ -507,8 +521,11 @@
             const envoyerDemandeBtn = document.getElementById('envoyerDemandeBtn');
             const reponseServeurDiv = document.getElementById('reponseServeur');
             const formulaireDevis = document.getElementById('demandeDevis');
+
+            const confirmationModal = document.getElementById('confirmationModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
     
-            // Fonction pour afficher/cacher les détails spécifiques au service (inchangée)
+            // Fonction pour afficher/cacher les détails spécifiques au service
             function toggleServiceDetails() {
                 detailsEtiquettes.style.display = 'none';
                 detailsCartesPlastique.style.display = 'none';
@@ -518,23 +535,50 @@
                     case 'creation_impression_etiquettes':
                     case 'impression_seule_etiquettes':
                         detailsEtiquettes.style.display = 'block';
+
+                        // Rendre les champs spécifiques aux étiquettes obligatoires
+                        document.getElementById('quantiteEtiquettes').required = true;
+                        document.getElementById('designEtiquettes').required = true;
                         break;
                     case 'cartes_visite_plastique':
                         detailsCartesPlastique.style.display = 'block';
+                        // Rendre les champs spécifiques aux cartes plastiques obligatoires
+                        document.getElementById('quantiteCartesPlastique').required = true;
+                        document.getElementById('designCartesPlastique').required = true;
                         break;
                     case 'cartes_visite_carton':
                         detailsCartesCarton.style.display = 'block';
+                        // Rendre les champs spécifiques aux cartes carton obligatoires
+                        document.getElementById('quantiteCartesCarton').required = true;
+                        document.getElementById('designCartesCarton').required = true;
+                        break;
+                    default:
+                        // Si aucun service spécifique n'est sélectionné, rendre les champs optionnels
+                        document.getElementById('quantiteEtiquettes').required = false;
+                        document.getElementById('designEtiquettes').required = false;
+                        document.getElementById('quantiteCartesPlastique').required = false;
+                        document.getElementById('designCartesPlastique').required = false;
+                        document.getElementById('quantiteCartesCarton').required = false;
+                        document.getElementById('designCartesCarton').required = false;
                         break;
                 }
             }
     
-            // Écouteur d'événements pour afficher/cacher les détails du service (inchangé)
+            // Écouteur d'événements pour afficher/cacher les détails du service
             serviceSelect.addEventListener('change', toggleServiceDetails);
+            toggleServiceDetails(); // Appeler une fois au chargement pour l'état initial
     
-            // Écouteur d'événements pour la soumission du formulaire (MODIFIÉ)
+            // Écouteur d'événements pour la soumission du formulaire
             envoyerDemandeBtn.addEventListener('click', async function(event) {
                 event.preventDefault(); // Empêcher la soumission par défaut du formulaire
     
+                // Vérification supplémentaire des champs requis côté client
+                if (!formulaireDevis.checkValidity()) {
+                    formulaireDevis.reportValidity();
+                    return;
+                }
+    
+
                 const formData = new FormData(formulaireDevis);
                 const data = {};
                 formData.forEach((value, key) => {
@@ -559,8 +603,11 @@
                         detailsEtiquettes.style.display = 'none';
                         detailsCartesPlastique.style.display = 'none';
                         detailsCartesCarton.style.display = 'none';
+
+                        confirmationModal.style.display = 'block'; // Afficher la fenêtre modale de confirmation
                     } else {
                         console.error('Erreur lors de l\'envoi de la demande:', result);
+                        reponseServeurDiv.textContent = 'Erreur lors de l\'envoi de la demande.';
                     }
     
                 } catch (error) {
@@ -568,7 +615,22 @@
                     reponseServeurDiv.textContent = 'Erreur de réseau lors de l\'envoi de la demande.';
                 }
             });
+
+    
+            // Gestionnaire d'événements pour fermer la fenêtre modale
+            closeModalBtn.addEventListener('click', function() {
+                confirmationModal.style.display = 'none'; // Cacher la fenêtre modale
+            });
+    
+            // Fermer la modale en cliquant en dehors du contenu
+            window.addEventListener('click', function(event) {
+                if (event.target === confirmationModal) {
+                    confirmationModal.style.display = 'none';
+                }
+            });
         });
     </script>
+    
+
 </body>
 </html>
