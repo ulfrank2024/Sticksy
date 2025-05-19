@@ -1,0 +1,544 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    position: fixed; /* Fixe l'en-tête en haut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Style pour le bouton toggle (hamburger) */
+.nav-toggle {
+    display: none; /* Caché par défaut sur les écrans plus grands */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.nav-toggle.toggle-active .hamburger:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.nav-toggle.toggle-active .hamburger:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.toggle-active .hamburger:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Style pour les liens de navigation */
+.nav-links {
+    display: block;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links ul li {
+    margin-left: 20px;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Style pour la navigation active (mobile) */
+.nav-links.nav-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Sous l'en-tête */
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-links.nav-active ul {
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-links.nav-active ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.hero {
+    background-color: #e0f7fa;
+    padding: 100px 0 80px; /* Ajuster le padding pour l'en-tête fixe */
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.service-item ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Style pour les tableaux (tarifs étiquettes et cartes de visite) */
+#tarifs table, .cards-visite-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+#tarifs th, #tarifs td, .cards-visite-info th, .cards-visite-info td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style pour les en-têtes de tableau */
+#tarifs th, .cards-visite-info th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    border-bottom: 2px solid #333; /* Ligne de séparation sous l'en-tête */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Style pour la section des témoignages */
+#temoignages {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+#temoignages h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.testimonial .author {
+    font-style: italic;
+    color: #777;
+}
+
+.testimonial .likes {
+    color: #007bff;
+    font-weight: bold;
+}
+
+#localisation {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#localisation h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#localisation address {
+    font-style: normal;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+#localisation a {
+    color: #96afc9;
+    text-decoration: none;
+}
+
+.map {
+    color: #7ab0ea;
+}
+
+#localisation a:hover {
+    text-decoration: underline;
+}
+
+#cartes-visite {
+    background-color: #f0f8ff; /* Couleur de fond légère */
+    padding: 60px 0;
+}
+
+#cartes-visite h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.cards-visite-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.cards-visite-info {
+    padding: 20px;
+}
+
+.cards-visite-info h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.cards-visite-info ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.cards-visite-info ul li {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.cards-visite-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cards-visite-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 120px;
+    height: 40px;
+}
+
+.visite {
+    width: 300px;
+    height: 300px;
+}
+.gal2{
+    background-color:#b18800be;
+}
+.gal1{
+    background-color:#33333398;
+}
+.logo1{
+    width: 100px;
+    height: 80px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header .container {
+        flex-direction: row; /* Rétablir l'alignement en ligne */
+        justify-content: space-between; /* Espacer le titre et le bouton */
+        align-items: center;
+    }
+
+    header h1 {
+        margin-bottom: 0; /* Supprimer la marge sous le titre */
+    }
+
+    .nav-toggle {
+        display: block; /* Afficher le bouton toggle sur mobile */
+    }
+
+    .nav-links {
+        display: none; /* Cacher la navigation par défaut sur mobile */
+        width: 100%;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Sous l'en-tête */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .hero {
+        padding: 120px 0 60px; /* Ajuster le padding pour l'en-tête fixe */
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .service-item {
+        padding: 15px;
+    }
+
+    #tarifs table, #tarifs thead, #tarifs tbody, #tarifs th, #tarifs td, #tarifs tr,
+    .cards-visite-info table, .cards-visite-info thead, .cards-visite-info tbody,
+    .cards-visite-info th, .cards-visite-info td, .cards-visite-info tr {
+        display: block;
+    }
+
+    #tarifs thead tr, .cards-visite-info thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        font-size: 12px;
+    }
+
+    #tarifs tr, .cards-visite-info tr {
+        border: 1px solid #ccc;
+    }
+
+    #tarifs td, .cards-visite-info td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        font-size: 11px;
+    }
+
+    #tarifs td:before, .cards-visite-info td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        content: attr(data-column);
+    }
+
+    #tarifs td:nth-of-type(1):before {
+        content: "Quantité d’étiquettes";
+    }
+
+    #tarifs td:nth-of-type(2):before {
+        content: "Tarif recommandé (CAN$)";
+    }
+
+    #tarifs td:nth-of-type(3):before {
+        content: "Quantité";
+    }
+
+    #tarifs td:nth-of-type(4):before {
+        content: "Prix (CAN$)";
+    }
+
+    .cards-visite-info td:nth-of-type(1):before {
+        content: "Quantité";
+    }
+
+    .cards-visite-info td:nth-of-type(2):before {
+        content: "Sans design (modèle client)";
+    }
+
+    .cards-visite-info td:nth-of-type(3):before {
+        content: "Avec design personnalisé";
+    }
+
+    /* Styles spécifiques aux tableaux sur mobile */
+    #tarifs th, .cards-visite-info th {
+        display: none; /* Cacher les en-têtes sur mobile */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    #temoignages {
+        padding: 40px 0;
+    }
+
+    #temoignages h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .testimonial {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    #localisation {
+        padding: 40px 0;
+    }
+
+    #localisation h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    #cartes-visite {
+        padding: 40px 0;
+    }
+
+    #cartes-visite h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .cards-visite-grid {
+        grid-template-columns: 1fr; /* Empiler les éléments sur mobile */
+    }
+
+    .cards-visite-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-visite-images img {
+        margin-bottom: 15px;
+    }
+}
